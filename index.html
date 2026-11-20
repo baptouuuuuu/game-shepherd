@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f2e7">
+  <title>Game Shepherd — Le petit berger</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Le petit berger, accueil"><span class="brand-icon">✳</span> le petit berger<span class="brand-dot">.</span></a>
+      <span class="top-note">UN JEU TOUT DOUX <span>✦</span></span>
+    </header>
+
+    <section class="intro">
+      <div>
+        <div class="eyebrow"><span class="eyebrow-dot"></span> UNE JOURNÉE AU GRAND AIR</div>
+        <h1>Allez, au <em>pré !</em></h1>
+        <p>Un chien, des moutons et un peu de patience.<br>À toi de ramener tout le monde à la maison.</p>
+      </div>
+      <div class="intro-decoration" aria-hidden="true">✳ <span>prends ton temps</span> ↗</div>
+    </section>
+
+    <section class="game-card" aria-label="Jeu du chien de berger">
+      <div class="game-toolbar">
+        <div class="level-info"><span class="level-badge" id="level-number">01</span><div><span class="tiny-label">NIVEAU <span id="level-count">1 / 6</span></span><strong id="level-name">La prairie tranquille</strong></div></div>
+        <div class="toolbar-right">
+          <div class="sheep-count"><span aria-hidden="true">☁</span> <strong id="count">0 / 4</strong><small> à l'enclos</small></div>
+          <button id="restart" class="restart" type="button" aria-label="Recommencer le niveau" title="Recommencer">↻</button>
+        </div>
+      </div>
+      <div class="field-wrap">
+        <canvas id="game" width="1000" height="600" tabindex="0" aria-label="Pré de jeu. Touche ou clique pour guider le chien ; tu peux aussi utiliser les flèches ou ZQSD."></canvas>
+        <div class="overlay" id="complete" hidden>
+          <div class="complete-card">
+            <div class="complete-icon">✦</div>
+            <p class="tiny-label">BIEN JOUÉ !</p>
+            <h2 id="complete-title">Tout le monde est rentré.</h2>
+            <p id="complete-message">Une belle journée pour être berger.</p>
+            <button id="next" type="button">Niveau suivant <span>→</span></button>
+          </div>
+        </div>
+        <div class="field-hint" id="field-hint" aria-hidden="true"><span>✦</span> touche le pré pour guider ton chien</div>
+      </div>
+      <div class="game-footer">
+        <div><span class="tip-icon">↗</span><span><strong>Le petit conseil</strong><br>Place-toi derrière les moutons pour les guider vers l'enclos.</span></div>
+        <div class="controls"><span>⌁</span> TACTILE, SOURIS OU CLAVIER</div>
+      </div>
+    </section>
+    <footer><span>FAIT POUR PRENDRE LE TEMPS <span class="heart">♥</span></span><span>BONNE BALADE, BERGER ! &nbsp; ✳</span></footer>
+  </main>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
